@@ -1,0 +1,12 @@
+<h1> Check our Restaurants</h1>
+
+<ul>
+<% @restaurants.each do |restaurant|%>
+<li><%= link_to "#{restaurant.name}", restaurant, :class => "text-decoration-none text-light" %></li>
+<br>
+<% end %>
+</ul>
+
+   <%= link_to new_restaurant_path(@restaurant) do %>
+       <button class="btn btn-primary"> Add a new restaurant</button>
+  <% end %>
